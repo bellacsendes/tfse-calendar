@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFSE Női NB I/B Mérkőzések Naptár</title>
+    <link rel="stylesheet" href="calendar-styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏐 TFSE Női NB I/B</h1>
+            <p class="subtitle">Mérkőzések Naptára 2026-2027</p>
+        </div>
+
+        <div class="controls">
+            <div class="button-group">
+                <a href="tfse-calendar.ics" download="TFSE-NB1B-Matches.ics" class="btn btn-download">
+                    📥 Letöltés (.ics fájl)
+                </a>
+                <button class="btn btn-subscribe" id="subscribeBtn">
+                    📅 Apple Calendar Feliratkozás
+                </button>
+                <button class="btn btn-filter" id="filterBtn">
+                    🔍 Szűrés
+                </button>
+            </div>
+            
+            <div class="filter-panel" id="filterPanel" style="display: none;">
+                <input type="text" id="searchInput" placeholder="Keresés csapatnév, hely...">
+                <select id="monthFilter">
+                    <option value="">Összes hónap</option>
+                    <option value="2026-09">2026 szeptember</option>
+                    <option value="2026-10">2026 október</option>
+                    <option value="2026-11">2026 november</option>
+                    <option value="2026-12">2026 december</option>
+                    <option value="2027-01">2027 január</option>
+                    <option value="2027-02">2027 február</option>
+                    <option value="2027-03">2027 március</option>
+                    <option value="2027-04">2027 április</option>
+                    <option value="2027-05">2027 május</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Összes mérkőzés:</span>
+                <span class="stat-value" id="matchCount">30</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Otthoni mérkőzések:</span>
+                <span class="stat-value" id="homeCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Idegenben:</span>
+                <span class="stat-value" id="awayCount">0</span>
+            </div>
+        </div>
+
+        <div class="matches-container" id="matchesContainer">
+            <!-- Matches will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <script src="calendar-script.js"></script>
+</body>
+</html>
